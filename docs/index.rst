@@ -8,8 +8,10 @@ Welcome to frc-api's documentation!
 
 .. toctree::
    :maxdepth: 2
+   myfile.md
+   test.md
    :caption: Contents:
-   myfile
+   
 
 
 
