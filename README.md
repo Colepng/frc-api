@@ -38,4 +38,4 @@ We have a mailing list located at: gamingwithcole7@gmail.com
 License
 -------
 
-The frc-api is licensed under the MIT license.
+The frc-api is licensed under GNU GPL V3.
