@@ -1,9 +1,10 @@
 LICENSE
 README.md
 pyproject.toml
+src/FrcApi/__init__.py
+src/FrcApi/config.py
+src/FrcApi/rankings.py
 src/FrcApi.egg-info/PKG-INFO
 src/FrcApi.egg-info/SOURCES.txt
 src/FrcApi.egg-info/dependency_links.txt
 src/FrcApi.egg-info/top_level.txt
-src/FrcWrapper/__init__.py
-src/FrcWrapper/rankings.py

@@ -1,11 +1,14 @@
 import requests
-from os import getenv
+import sys
+sys.path.append(r"C:\Users\gamin\OneDrive\Documents\GitHub\frc-api\src\FrcApi")
+import src.FrcApi as FrcApi
+
 class Rankings:
     def __init__(self, season : int = 2022, team_number : int = None, District : str = None):
         self.team_number = team_number
         self.season = season
         self.District = District
-        self.headers = {'Authorization': f'Basic {getenv("FRC_API_KEY")}'}
+        self.headers = {'Authorization': f'Basic {FrcApi.config.key}'}
         self.payload = {}
 
     def Qual_Performance_Points(self, tournamentType : str, qualificationRank : int, teamsAtEvent : int):
@@ -23,9 +26,9 @@ class Rankings:
         url = f"https://frc-api.firstinspires.org/v3.0/{self.season}/rankings/district/qualPerformanceCalculation?tournamentType={tournamentType}&qualificationRank={qualificationRank}&teamsAtEvent={teamsAtEvent}"
 
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        return response.text
+        return int(response.text)
 
-    def Alliance_Selection_Points(self, tournamentType : str, NumberOfAlliances : str, allianceNumber : int, allianceRole : str, season : int = None):
+    def Alliance_Selection_Points(self, tournamentType : str, NumberOfAlliances : int or str, allianceNumber : int, allianceRole : str, season : int = None):
 
         """
         This function returns the alliance selection points for a given team.
@@ -34,7 +37,7 @@ class Rankings:
         Ex: "DistrictEvent" or "Championship" check docs for all of the types.
 
         NumberOfAlliances: The number of alliances. 
-        Ex: 2 or Two", 4 or "Four", 6 or "Six", 8 or "eight", 16 or "Sixteen"
+        Ex: "Two", "Four",  "Six", "eight", "Sixteen"
 
         allianceNumber: What playoff alliance the team is on
 
@@ -42,10 +45,10 @@ class Rankings:
         Ex: "Captain", "Round1-3", "Backup" or "None"   
         """
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/district/allianceSelectionCalculation?tournamentType={tournamentType}&sizeType={NumberOfAlliances + 'Alliance'}&allianceNumber={allianceNumber}&allianceRole={allianceRole}"
+        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/district/allianceSelectionCalculation?tournamentType={tournamentType}&sizeType={str(NumberOfAlliances) + 'Alliance'}&allianceNumber={allianceNumber}&allianceRole={allianceRole}"
 
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        return response.text
+        return int(response.text)
 
     def Playoff_Advancement_Points(self, tournamentType : str, quarterFinalWins : int, semiFinalWins : int, finalWins : int, season : int = None):
 
@@ -68,25 +71,28 @@ class Rankings:
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
         return response.text
 
-    def Event_rankings(self, event_key : str, team_number : int = None, top : int = None, season :int = None):
+    def Event_Rankings(self, event_code : str, team_number : int = None, top : int = None, season : int = None, use_predifend_infomation : bool = False):
         """
         This function returns the rankings of a event.
 
-        event_key: The event key of the event.
+        event_code: The event code of the event.
         
         Team_number: The team number of the team.
 
         top: The number of teams to return.
         """
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/{event_key}?"
-        if team_number:
-            url += f"teamNumber={team_number}"
-        elif top:
-            url += f"top={top}"
-        elif self.team_number:
-            url += f"teamNumber={self.team_number}"
-
+        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/{event_code}"
+        if use_predifend_infomation:  
+            if self.team_number:
+                url += f"?teamNumber={self.team_number}"
+        else:
+            if team_number:
+                url += f"?teamNumber={team_number}"
+            elif top:
+                url += f"?top={top}"
+        
+        print(url)
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
         return response.text
 
@@ -126,4 +132,4 @@ class Rankings:
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
         return response.text
 
-rank = Rankings(season=2022, team_number=865, District="ONT")
+

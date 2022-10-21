@@ -6,18 +6,7 @@
 Welcome to frc-api's documentation!
 ===================================
 
+Contents
+--------
 .. toctree::
-   :maxdepth: 2
-   myfile.md
-   test.md
-   :caption: Contents:
-   
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   rankings.md
