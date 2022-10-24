@@ -92,7 +92,7 @@ class Rankings:
             elif top:
                 url += f"?top={top}"
         
-        print(url)
+        print(url, self.headers)
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
         return response.text
 
