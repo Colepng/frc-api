@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: FrcApi
-Version: 0.0.2
+Version: 0.3
 Summary: A api wrapper for the FRC events api
 Author-email: Cole Kauder-McMurrich <gamingwithcole7@gmail.com>
 License: GNU GENERAL PUBLIC LICENSE

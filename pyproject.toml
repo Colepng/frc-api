@@ -1,6 +1,6 @@
 [project]
 name = "FrcApi"
-version = "0.0.2"
+version = "0.3"
 authors = [
     { name = "Cole Kauder-McMurrich", email = "gamingwithcole7@gmail.com" },
 ]
