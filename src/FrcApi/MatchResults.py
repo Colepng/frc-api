@@ -20,25 +20,12 @@ class MatchResults:
         """
         This function returns the score details for a given match.
         """
-        url = f"""https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/scores/{Event}/{MatchType}?"""
+        url = f"""https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/scores/{Event}/{MatchType}?MatchNumber={MatchNumber}&TeamNumber={TeamNumber}&start={start}&end={end}"""
+        if MatchNumber and TeamNumber:
+            raise ValueError("You can't specify both MatchNumber and TeamNumber")
 
-        if MatchNumber:
-            url += f"matchNumber={MatchNumber}&"
-            if start:
-                url += f"start={start}&"
-                if end:
-                    url += f"end={end}&"
-        elif TeamNumber:
-            url += f"teamNumber={TeamNumber}&"
-            if start:
-                url += f"start={start}&"
-                if end:
-                    url += f"end={end}&"
-        else:
-            if start:
-                url += f"start={start}&"
-                if end:
-                    url += f"end={end}&"
+        if MatchNumber and start or MatchNumber and end:
+            raise ValueError("You can't specify both MatchNumber and Start or End")
 
         response = requests.request(
             "GET", url, headers=self.headers, data=self.payload)
@@ -64,7 +51,14 @@ class MatchResults:
             raise ValueError("You can't specify both MatchNumber and TeamNumber")
 
         url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/matches/{Event}?tournamentLevel={MatchLevel}&matchNumber={MatchNumber}&teamNumber={TeamNumber}&start={Start}&end={End}"
-        
+      
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        print(url)
-        return response.text
+        # print(url)
+        if MatchNumber:
+            MatchNumPos = response.text.find(f'"matchNumber":{MatchNumber},')
+            MatchStart = response.text[0:MatchNumPos].rindex('{"isReplay"')
+            MatchEnd = response.text.find("}]},", MatchNumPos,)
+            # print(MatchNumber, MatchNumPos, MatchStart, MatchEnd)
+            return response.text[MatchStart:MatchEnd + 4]
+        else:
+           return response.text
