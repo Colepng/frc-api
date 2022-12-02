@@ -17,7 +17,3 @@ class TestMatchResults:
     def test_two_ScoreDetails(self):
        pass 
     
-# print(MatchResults.EventMatchResults(Event="on305", MatchLevel="qual", TeamNumber=865, Start=0, End=10))
-print(MatchResults.EventMatchResults(Event="on305", MatchLevel="qual", MatchNumber=2))
-# open("test.txt", "w").write(MatchResults.EventMatchResults(Event="on305", MatchLevel="playoff", MatchNumber=2))
-# open("test1.txt", "w").write(MatchResults.ScoreDetails(Event="on305", MatchType="playoff", MatchNumber=2))
