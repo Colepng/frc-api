@@ -12,7 +12,7 @@ MatchResults = FrcApi.MatchResults(season = 2022, team_number = 865, District = 
 class TestMatchResults:
     def test_one_ScoreDetails(self):
         """Test the Score Details function"""
-        assert MatchResults.ScoreDetails(Event="on305", MatchType="playoff") == open(r"Tests\Test returns\ScoreDetails_test_one.txt", "r").read()
+        assert MatchResults.ScoreDetails(Event="on305", MatchLevel="playoff") == open(r"Tests\Test returns\ScoreDetails_test_one.txt", "r").read()
         
     def test_two_ScoreDetails(self):
        pass 
