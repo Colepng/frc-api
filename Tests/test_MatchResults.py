@@ -1,4 +1,4 @@
-import src.FrcApi as FrcApi
+import FrcApi
 import os
 from dotenv import load_dotenv
 load_dotenv()

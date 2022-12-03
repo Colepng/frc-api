@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 src/FrcApi/MatchResults.py
+src/FrcApi/SeasonData.py
 src/FrcApi/__init__.py
 src/FrcApi/config.py
 src/FrcApi/rankings.py
