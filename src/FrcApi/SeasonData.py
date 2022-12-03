@@ -20,6 +20,5 @@ class SeasonData:
         """
         url = f"{FrcApi.BASEURL}{season}"
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        with open('data.json', 'w', encoding='utf-8') as f:
-            json.dump(response.json(), f, ensure_ascii=False, indent=4)
-        return response.text
+
+        return response.json()

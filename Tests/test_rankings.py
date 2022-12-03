@@ -13,6 +13,7 @@ class TestRankings:
     def test_one_Qual_Performance_Points(self):
         """Test the function for calculating the qual performance points"""
         assert rank.Qual_Performance_Points(tournamentType = "Championship", qualificationRank = 1, teamsAtEvent = 10) == 22
+        print("test one passed")
 
     def test_two_Qual_Performance_Points(self):
         """Test the function for calculating the qual performance points"""
@@ -39,14 +40,14 @@ class TestRankings:
         #     assert rank.Playoff_Advancement_Points(tournamentType = "Championship", quarterFinalWins = 1, semiFinalWins = 1, finalWins = 1) == 0
         # """ Playoff Advancement Points are down right now. Test later """
 
-    def test_one_District_Points(self):
+    def test_one_Event_Rankings(self):
         """Test the District Points function"""
         assert rank.Event_Rankings(event_code = "on305") == open(r"Tests\Test returns\District_Points_test_one.txt", "r").read()
 
-    def test_two_District_Points(self):
+    def test_two_Event_Rankings(self):
         """Test the District Points function"""
         assert rank.Event_Rankings(event_code = "onbar", season=2020, use_predifend_infomation = True) == open(r"Tests\Test returns\District_Points_test_two.txt", "r").read()
 
-    def test_three_District_Points(self):
+    def test_three_Event_Rankings(self):
         """Test the District Points function"""
         assert rank.Event_Rankings(event_code = "ONCMP", season=2022, top=10) == open(r"Tests\Test returns\District_Points_test_three.txt", "r").read()

@@ -35,7 +35,7 @@ class MatchResults:
         response = requests.request(
             "GET", url, headers=self.headers, data=self.payload)
         print(url)
-        return response.text
+        return response.json()
 
     def EventMatchResults(self, Event: str, MatchLevel: str = None, TeamNumber: int = None, MatchNumber: int = None, Start: int = None, End: int = None, season: int = None):
         """
