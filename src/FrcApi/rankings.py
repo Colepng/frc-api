@@ -119,9 +119,10 @@ class Rankings:
             elif top:
                 url += f"?top={top}"
 
-        print(url, self.headers)
         response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        return response.text
+        # Event_Rankings.json = response.json()
+        # text = response.text
+        return response.json() 
 
     def Distirct_Rankings(
         self,
