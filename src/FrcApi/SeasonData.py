@@ -1,7 +1,7 @@
 import requests
-import sys
-# from . import BASEURL, KEY
+
 from .config import BASEURL, config
+
 
 class SeasonData:
     def __init__(self, season: int = 2022, team_number: int = None,
@@ -10,17 +10,17 @@ class SeasonData:
         self.season = season
         self.District = District
         self.headers = {'Authorization': f'Basic {config.api_key}'}
-        self.payload = {}   
-    
+        self.payload = {}
+
     def SeasonSummary(self, season: int):
-        """
-        The season summary API returns a high level glance of a particular FRC season.
 
         """
+        The season summary API returns basic info of a particular FRC season.
+        Examples: The number of events or the number of teams that season.
+        """
+
         url = f"{BASEURL}{season}"
-        response = requests.request("GET", url, headers=self.headers, data=self.payload)
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
 
         return response.json()
-
-    def test(self):
-        print(config.api_key)
