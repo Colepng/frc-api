@@ -1,25 +1,45 @@
+"""
+place holder.
+
+place holder.
+place holder.
+"""
 import requests
 
-from .config import BASEURL, config
+from .config import BASEURL, Config
 
 
 class SeasonData:
+    """place holder."""
+
     def __init__(self, season: int = 2022, team_number: int = None,
-                 District: str = None):
+                 district: str = None):
+        """Place holder."""
         self.team_number = team_number
         self.season = season
-        self.District = District
-        self.headers = {'Authorization': f'Basic {config.api_key}'}
+        self.district = district
+        self.headers = {'Authorization': f'Basic {Config.api_key}'}
         self.payload = {}
 
-    def SeasonSummary(self, season: int):
-
+    def season_summary(self, season: int):
         """
-        The season summary API returns basic info of a particular FRC season.
+        Return info about a season.
+
         Examples: The number of events or the number of teams that season.
         """
-
         url = f"{BASEURL}{season}"
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
+
+        return response.json()
+
+    def event_listing(self, season: int):
+        """
+        Place holder.
+
+        place holder.
+        """
+        url = f"{BASEURL}events"
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
 
