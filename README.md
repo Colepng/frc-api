@@ -26,8 +26,8 @@ Install  frc-api by running:
 Contribute
 ----------
 
-- Issue Tracker: github.com/Colepng/FRC-API/issues
-- Source Code: github.com/Colepng/FRC-API/tree/main
+- [Issue Tracker](github.com/Colepng/FRC-API/issues)
+- [Source Code](github.com/Colepng/FRC-API/tree/main)
 
 Support
 -------
