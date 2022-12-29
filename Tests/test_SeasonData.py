@@ -16,15 +16,14 @@ FrcApi.Config.encode_key(FrcApi.Config, api_key=TOKEN, username="colepng")
 season_data = FrcApi.SeasonData(team_number=865, district="ONT")
 
 
-# Faling test, need to investigate to figure out if
-# It an issue the the weird cachters in the names or if it an code issue
 class TestSeasonData:
     """Test Season Data."""
 
-    # def test_1_season_summary(self):
-    #     """Test Season Summary."""
-    #     with open(r"Tests\ProperOutput\SeasonSummary_test_1.json", "r") as f:
-    #         assert season_data.season_summary(season=2022) == json.load(f)
+    def test_1_season_summary(self):
+        """Test Season Summary."""
+        with open(r"Tests\ProperOutput\SeasonSummary_test_1.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.season_summary(season=2022) == json.load(f)
 
     def test_event_listing_error_1(self):
         """Test Event Listing event_code and any thing else error."""
@@ -47,9 +46,20 @@ class TestSeasonData:
     def test_event_listing_1(self):
         """Test Event Listing."""
         with open(r"Tests\ProperOutput\event_listings_test_1.json", "r") as f:
-            assert season_data.event_listing(event_code="onwat") == json.load(f)
+            assert season_data.event_listing(event_code="onwat") == json.load(f)  # noqa: E501
 
     def test_event_listing_2(self):
         """Test Event Listing."""
         with open(r"Tests\ProperOutput\event_listings_test_2.json", "r") as f:
             assert season_data.event_listing(team_number=2022) == json.load(f)
+
+    def test_event_listing_3(self):
+        """Test Event Listing."""
+        with open(r"Tests\ProperOutput\event_listings_test_3.json", "r") as f:
+            assert season_data.event_listing(district_code="ONT") == json.load(f)  # noqa: E501
+
+    def test_event_listing_4(self):
+        """Test Event Listing."""
+        with open(r"Tests\ProperOutput\event_listings_test_4.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.event_listing(season=2022) == json.load(f)  # noqa: E501

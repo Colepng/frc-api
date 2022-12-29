@@ -17,4 +17,4 @@ def SaveAsJson(data, filename):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-SaveAsJson(season_data.event_listing(team_number=2022), "event_listings_test_2")  # noqa: E501
+SaveAsJson(season_data.event_listing(season=2022), "event_listings_test_4")  # noqa: E501

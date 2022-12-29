@@ -50,11 +50,15 @@ class SeasonData:
             if any([team_number, district_code, exclude_district, week_number, tournamentype]):  # noqa: E501
                 raise ValueError("cannot specify any optional args with event_code")  # noqa: E501
 
-        elif district_code and exclude_district:
-            raise ValueError("If you specify a district code you cannot specify an event code or exclude district")  # noqa: E501
+        elif district_code:
+            url_args += f"&districtCode={district_code}"
+            if exclude_district:
+                raise ValueError("If you specify a district code you cannot specify an event code or exclude district")  # noqa: E501
 
         url_args += f"&teamNumber={team_number}&excludeDistrict={str(exclude_district).lower()}&weekNumber={week_number}&tounamentType={tournamentype}"  # noqa: E501
         url = f"{BASEURL}{season_check(season, self.season)}/events?{url_args}"
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
-        return response.json()
+        response_json = response.json()
+        # encoded_response = {i: str(j, "utf-8") for i, j in response_json} # noqa: E501
+        return response_json 
