@@ -400,6 +400,28 @@
         },
         {
             "allianceCount": "EightAlliance",
+            "weekNumber": 8,
+            "announcements": [],
+            "code": "CARVER",
+            "divisionCode": "CMPTX",
+            "name": "FIRST Championship - FIRST Robotics Competition - Carver Division",
+            "type": "ChampionshipDivision",
+            "districtCode": null,
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-20T00:00:00",
+            "dateEnd": "2022-04-23T23:59:59",
+            "address": "1001 Avenida De Las Americas",
+            "website": "https://www.firstchampionship.org",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires_carver"
+            ],
+            "timezone": "Central Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
             "weekNumber": 3,
             "announcements": [],
             "code": "CASD",
@@ -1126,6 +1148,28 @@
         },
         {
             "allianceCount": "EightAlliance",
+            "weekNumber": 8,
+            "announcements": [],
+            "code": "GALILEO",
+            "divisionCode": "CMPTX",
+            "name": "FIRST Championship - FIRST Robotics Competition - Galileo Division",
+            "type": "ChampionshipDivision",
+            "districtCode": null,
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-20T00:00:00",
+            "dateEnd": "2022-04-23T23:59:59",
+            "address": "1001 Avenida De Las Americas",
+            "website": "https://www.firstchampionship.org",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires_galileo"
+            ],
+            "timezone": "Central Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
             "weekNumber": 5,
             "announcements": [],
             "code": "HIHO",
@@ -1145,6 +1189,28 @@
                 "https://www.twitch.tv/firstinspires32"
             ],
             "timezone": "Hawaiian Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 8,
+            "announcements": [],
+            "code": "HOPPER",
+            "divisionCode": "CMPTX",
+            "name": "FIRST Championship - FIRST Robotics Competition - Hopper Division",
+            "type": "ChampionshipDivision",
+            "districtCode": null,
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-20T00:00:00",
+            "dateEnd": "2022-04-23T23:59:59",
+            "address": "1001 Avenida De Las Americas",
+            "website": "https://www.firstchampionship.org",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires_hopper"
+            ],
+            "timezone": "Central Standard Time"
         },
         {
             "allianceCount": "EightAlliance",
@@ -1840,6 +1906,94 @@
                 "https://www.twitch.tv/firstinspires22",
                 "https://www.twitch.tv/firstinspires23",
                 "https://www.twitch.tv/firstinspires24"
+            ],
+            "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 7,
+            "announcements": [],
+            "code": "MICMP1",
+            "divisionCode": "MICMP",
+            "name": "FIRST in Michigan State Championship - DTE Energy Foundation Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "FIM",
+            "venue": "Saginaw Valley State University",
+            "city": "University Center",
+            "stateprov": "MI",
+            "country": "USA",
+            "dateStart": "2022-04-13T00:00:00",
+            "dateEnd": "2022-04-16T23:59:59",
+            "address": "Ryder Center 7400 Bay Road",
+            "website": "https://www.firstinmichigan.org/",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires21"
+            ],
+            "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 7,
+            "announcements": [],
+            "code": "MICMP2",
+            "divisionCode": "MICMP",
+            "name": "FIRST in Michigan State Championship - Ford Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "FIM",
+            "venue": "Saginaw Valley State University",
+            "city": "University Center",
+            "stateprov": "MI",
+            "country": "USA",
+            "dateStart": "2022-04-13T00:00:00",
+            "dateEnd": "2022-04-16T23:59:59",
+            "address": "Ryder Center 7400 Bay Road",
+            "website": "https://www.firstinmichigan.org/",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires23"
+            ],
+            "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 7,
+            "announcements": [],
+            "code": "MICMP3",
+            "divisionCode": "MICMP",
+            "name": "FIRST in Michigan State Championship - APTIV Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "FIM",
+            "venue": "Saginaw Valley State University",
+            "city": "University Center",
+            "stateprov": "MI",
+            "country": "USA",
+            "dateStart": "2022-04-13T00:00:00",
+            "dateEnd": "2022-04-16T23:59:59",
+            "address": "Ryder Center 7400 Bay Road",
+            "website": "https://www.firstinmichigan.org/",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires24"
+            ],
+            "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 7,
+            "announcements": [],
+            "code": "MICMP4",
+            "divisionCode": "MICMP",
+            "name": "FIRST in Michigan State Championship - Consumers Energy Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "FIM",
+            "venue": "Saginaw Valley State University",
+            "city": "University Center",
+            "stateprov": "MI",
+            "country": "USA",
+            "dateStart": "2022-04-13T00:00:00",
+            "dateEnd": "2022-04-16T23:59:59",
+            "address": "Ryder Center 7400 Bay Road",
+            "website": "https://www.firstinmichigan.org/",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires22"
             ],
             "timezone": "Eastern Standard Time"
         },
@@ -2890,6 +3044,68 @@
             "website": "https://nefirst.org/",
             "webcasts": [],
             "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 7,
+            "announcements": [],
+            "code": "NECMP1",
+            "divisionCode": "NECMP",
+            "name": "New England FIRST District Championship - Calcium Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "NE",
+            "venue": "Eastern States Exposition",
+            "city": "West Springfield",
+            "stateprov": "MA",
+            "country": "USA",
+            "dateStart": "2022-04-13T00:00:00",
+            "dateEnd": "2022-04-16T23:59:59",
+            "address": "1305 Memorial Ave",
+            "website": "https://nefirst.org/",
+            "webcasts": [],
+            "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 7,
+            "announcements": [],
+            "code": "NECMP2",
+            "divisionCode": "NECMP",
+            "name": "New England FIRST District Championship - Titanium Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "NE",
+            "venue": "Eastern States Exposition",
+            "city": "West Springfield",
+            "stateprov": "MA",
+            "country": "USA",
+            "dateStart": "2022-04-13T00:00:00",
+            "dateEnd": "2022-04-16T23:59:59",
+            "address": "1305 Memorial Ave",
+            "website": "https://nefirst.org/",
+            "webcasts": [],
+            "timezone": "Eastern Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 8,
+            "announcements": [],
+            "code": "NEWTON",
+            "divisionCode": "CMPTX",
+            "name": "FIRST Championship - FIRST Robotics Competition - Newton Division",
+            "type": "ChampionshipDivision",
+            "districtCode": null,
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-20T00:00:00",
+            "dateEnd": "2022-04-23T23:59:59",
+            "address": "1001 Avenida De Las Americas",
+            "website": "https://www.firstchampionship.org",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires_newton"
+            ],
+            "timezone": "Central Standard Time"
         },
         {
             "allianceCount": "EightAlliance",
@@ -4224,6 +4440,28 @@
         },
         {
             "allianceCount": "EightAlliance",
+            "weekNumber": 8,
+            "announcements": [],
+            "code": "ROEBLING",
+            "divisionCode": "CMPTX",
+            "name": "FIRST Championship - FIRST Robotics Competition - Roebling Division",
+            "type": "ChampionshipDivision",
+            "districtCode": null,
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-20T00:00:00",
+            "dateEnd": "2022-04-23T23:59:59",
+            "address": "1001 Avenida De Las Americas",
+            "website": "https://www.firstchampionship.org",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires_roebling"
+            ],
+            "timezone": "Central Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
             "weekNumber": 2,
             "announcements": [],
             "code": "SCAN",
@@ -4379,6 +4617,28 @@
         },
         {
             "allianceCount": "EightAlliance",
+            "weekNumber": 8,
+            "announcements": [],
+            "code": "TURING",
+            "divisionCode": "CMPTX",
+            "name": "FIRST Championship - FIRST Robotics Competition - Turing Division",
+            "type": "ChampionshipDivision",
+            "districtCode": null,
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-20T00:00:00",
+            "dateEnd": "2022-04-23T23:59:59",
+            "address": "1001 Avenida De Las Americas",
+            "website": "https://www.firstchampionship.org",
+            "webcasts": [
+                "https://www.twitch.tv/firstinspires_turing"
+            ],
+            "timezone": "Central Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
             "weekNumber": 5,
             "announcements": [],
             "code": "TXAMA",
@@ -4445,6 +4705,46 @@
             "divisionCode": null,
             "name": "FIRST In Texas District Championship",
             "type": "DistrictChampionshipWithLevels",
+            "districtCode": "FIT",
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-06T00:00:00",
+            "dateEnd": "2022-04-09T23:59:59",
+            "address": "1001 Avenida de las Americas",
+            "website": "https://firstintexas.org/",
+            "webcasts": [],
+            "timezone": "Central Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 6,
+            "announcements": [],
+            "code": "TXCMP1",
+            "divisionCode": "TXCMP",
+            "name": "FIRST In Texas District Championship - Apollo Division",
+            "type": "DistrictChampionshipDivision",
+            "districtCode": "FIT",
+            "venue": "George R. Brown Convention Center",
+            "city": "Houston",
+            "stateprov": "TX",
+            "country": "USA",
+            "dateStart": "2022-04-06T00:00:00",
+            "dateEnd": "2022-04-09T23:59:59",
+            "address": "1001 Avenida de las Americas",
+            "website": "https://firstintexas.org/",
+            "webcasts": [],
+            "timezone": "Central Standard Time"
+        },
+        {
+            "allianceCount": "EightAlliance",
+            "weekNumber": 6,
+            "announcements": [],
+            "code": "TXCMP2",
+            "divisionCode": "TXCMP",
+            "name": "FIRST In Texas District Championship - Mercury Division",
+            "type": "DistrictChampionshipDivision",
             "districtCode": "FIT",
             "venue": "George R. Brown Convention Center",
             "city": "Houston",
@@ -5266,7 +5566,7 @@
             "announcements": [],
             "code": "ZHHA",
             "divisionCode": null,
-            "name": "Hangzhou Regional",
+            "name": "Nanjing Regional",
             "type": "Regional",
             "districtCode": null,
             "venue": "HangZhou International Expo Center",
@@ -5283,5 +5583,5 @@
             "timezone": "China Standard Time"
         }
     ],
-    "eventCount": 250
+    "eventCount": 264
 }

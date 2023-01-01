@@ -59,6 +59,4 @@ class SeasonData:
         url = f"{BASEURL}{season_check(season, self.season)}/events?{url_args}"
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
-        response_json = response.json()
-        # encoded_response = {i: str(j, "utf-8") for i, j in response_json} # noqa: E501
-        return response_json 
+        return response.json() 
