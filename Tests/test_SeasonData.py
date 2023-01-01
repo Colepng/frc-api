@@ -77,3 +77,8 @@ class TestSeasonData:
     #     with open(r"Tests\ProperOutput\event_listings_test_6.json", "r",
     #               encoding="utf-8") as f:
     #         assert season_data.event_listing(season=2022, tournamentype="OffSeason") == json.load(f)  # noqa: E501
+
+    def test_district_listings(self):
+        """Test District Listings."""
+        with open(r"Tests\ProperOutput\district_listings_test_1.json", "r") as f: # noqa: E501
+            assert season_data.district_listings() == json.load(f)
