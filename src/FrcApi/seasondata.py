@@ -59,6 +59,7 @@ class SeasonData:
         url = f"{BASEURL}{season_check(season, self.season)}/events?{url_args}"
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
+        print(url)
         return response.json()
 
     def district_listings(self, season: int = None) -> dict:

@@ -1,5 +1,5 @@
 {
-    "Events": [
+    "events": [
         {
             "allianceCount": "EightAlliance",
             "weekNumber": 4,
@@ -8,7 +8,7 @@
             "divisionCode": null,
             "name": "ONT District University of Waterloo Event",
             "type": "DistrictEvent",
-            "districtCode": "ONT",
+            "districtCode": null,
             "venue": "University of Waterloo",
             "city": "Waterloo",
             "stateprov": "ON",
