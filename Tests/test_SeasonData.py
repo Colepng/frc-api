@@ -80,5 +80,41 @@ class TestSeasonData:
 
     def test_district_listings(self):
         """Test District Listings."""
-        with open(r"Tests\ProperOutput\district_listings_test_1.json", "r") as f: # noqa: E501
+        with open(r"Tests\ProperOutput\district_listings_test_1.json", "r") as f:  # noqa: E501
             assert season_data.district_listings() == json.load(f)
+
+    def test_team_listings_1(self):
+        """Test Team Listings"""
+        with open(r"Tests\ProperOutput\team_listings_test_1.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.team_listings(season=2018, page_max=35) == json.load(f)  # noqa: E501
+
+    def test_team_listings_2(self):
+        """Test Team Listings"""
+        with open(r"Tests\ProperOutput\team_listings_test_2.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.team_listings(event_code="onwat") == json.load(f)  # noqa: E501
+
+    def test_team_listings_3(self):
+        """Test Team Listings"""
+        with open(r"Tests\ProperOutput\team_listings_test_3.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.team_listings(district_code="ISR") == json.load(f)  # noqa: E501
+
+    def test_team_listings_4(self):
+        """Test Team Listings"""
+        with open(r"Tests\ProperOutput\team_listings_test_4.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.team_listings(state="British Columbia") == json.load(f)  # noqa: E501
+
+    def test_team_listings_5(self):
+        """Test Team Listings"""
+        with open(r"Tests\ProperOutput\team_listings_test_5.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.team_listings(page=3) == json.load(f)  # noqa: E501
+
+    def test_team_listings_6(self):
+        """Test Team Listings"""
+        with open(r"Tests\ProperOutput\team_listings_test_6.json", "r",
+                  encoding="utf-8") as f:
+            assert season_data.team_listings(page=[1, 5, 10, 20]) == json.load(f)  # noqa: E501
