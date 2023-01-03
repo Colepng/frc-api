@@ -55,7 +55,7 @@ class TestSeasonData:
     # def test_event_listing_2(self):
     #     """Test Event Listing."""
     #     with open(ProperOutput / "event_listings_test_2.json", "r") as f:
-    #         assert season_data.event_listing(team_number=2022) == json.load(f)
+    #         assert season_data.event_listing(team_number=2022) == json.load(f)  # noqa: E501
 
     # def test_event_listing_3(self):
     #     """Test Event Listing."""
