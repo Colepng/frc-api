@@ -33,7 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: set up api key
       env:
-      Frc-api-token: ${{ secrets.FRC_API_KEY }}
+        Frc-api-token: ${{ secrets.FRC_API_KEY }}
     - name: Test with pytest
       run: |
         pytest
