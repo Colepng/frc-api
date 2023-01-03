@@ -1,21 +1,23 @@
+"""
+place holder.
+
+place holder.
+place holder.
+"""
 import base64
 
-global key
-key = "test"
+
+BASEURL = "https://frc-api.firstinspires.org/v3.0/"
 
 
-def token(token: str, username: str = "", encoded: bool = False):
-    """This function takes your token and saves it for the moudle to use.
-    token: Your token.
+class Config:
+    """This class is used to store info."""
 
-    username: Your username.
+    def key(self, api_key: str) -> None:
+        """Set the api key."""
+        self.api_key = api_key
 
-    encoded: If you have already encoded the token or not, if so set to True and the username is not needed.
-    """
-    if not encoded:
-        token_base64 = base64.standard_b64encode(
-            f"{username}:{token}".encode()
-        ).decode()
-        token = token_base64
-    global key
-    key = token
+    def encode_key(self, api_key: str, username: str) -> None:
+        """Encode the api key."""
+        encode = base64.b64encode(f"{username}:{api_key}".encode("utf-8"))
+        self.api_key = encode.decode("utf-8")

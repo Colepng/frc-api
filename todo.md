@@ -16,5 +16,14 @@ Remove the following from rankings.py
 
 Fix the following in MatchResults.py
 
-- [ ] Fix the match results to be more readable
+- [ ] Make the match results to be more readable
 - [x] First Api seemes to have a bug where MatchNumber dose not do anything look into later in the EventMatchResults functions(Now fully working)
+
+-- Fix the following in all files
+
+- [ ] Remove old print statments
+- [ ] Remove old comments
+- [ ] Remove old code
+- [ ] Replace respone.text with respone.json()
+- [ ] Replace all placeholder raise errors with actual errors
+- [ ] Replace all placeholder docstrings with actual docstrings
