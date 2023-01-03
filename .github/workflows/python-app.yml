@@ -33,7 +33,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Create the env file
       run: |
-        echo "Frc-api-key=${{ secrets.FRC_API_KEY }}" > .env
+        echo "Frc-api-key=dsdds${{ secrets.FRC_API_KEY }}sddssd" > .env
+        cat .env
     - name: Test with pytest
       run: |
         pytest
