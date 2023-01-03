@@ -13,6 +13,7 @@ Remove the following from rankings.py
 
 - [ ] Remove Pre Difined infomation
 - [ ] Fix the results to be more readable
+- [ ] Bring over the page code form seasondata.py
 
 Fix the following in MatchResults.py
 
@@ -27,3 +28,4 @@ Fix the following in MatchResults.py
 - [ ] Replace respone.text with respone.json()
 - [ ] Replace all placeholder raise errors with actual errors
 - [ ] Replace all placeholder docstrings with actual docstrings
+- [ ] Change all arguments to be on individual lines

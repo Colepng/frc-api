@@ -1,18 +1,19 @@
 import requests
 
+from .config import BASEURL, Config
+from .fun import season_check
+
+
 class Rankings:
-    def __init__(
-        self, season: int = 2022, team_number: int = None, District: str = None
-    ):
-        self.team_number = team_number
+    def __init__(self, season: int = 2022):
+        """Initialize the class."""
         self.season = season
-        self.District = District
-        self.headers = {"Authorization": f"Basic {FrcApi.config.key}"}
+        self.headers = {"Authorization": f"Basic {Config.key}"}
         self.payload = {}
 
-    def Qual_Performance_Points(
-        self, tournamentType: str, qualificationRank: int, teamsAtEvent: int
-    ):
+    def qual_performance_points(self, tournament_type: str,
+                                qualification_rank: int, teams_at_event: int,
+                                season: int = None) -> int:
         """
         This function returns the qual performance points for a given team.
 
@@ -23,21 +24,18 @@ class Rankings:
 
         teamsAtEvent: The number of teams at the event.
         """
+        season = season_check(self.season, season)
+        url_args = f"&tournamentType={tournament_type}&qualificationRank={qualification_rank}&teamsAtEvent={teams_at_event}"  # noqa: E501
+        url = f"{BASEURL}{season}/rankings/district/qualPerformanceCalculation?{url_args}"  # noqa: E501
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season}/rankings/district/qualPerformanceCalculation?tournamentType={tournamentType}&qualificationRank={qualificationRank}&teamsAtEvent={teamsAtEvent}"
-
-        response = requests.request("GET", url, headers=self.headers, data=self.payload)
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
         return int(response.text)
 
-    def Alliance_Selection_Points(
-        self,
-        tournamentType: str,
-        NumberOfAlliances: int or str,
-        allianceNumber: int,
-        allianceRole: str,
-        season: int = None,
-    ):
-
+    def alliance_selection_points(self, tournament_type: str,
+                                  number_of_alliances: int | str,
+                                  alliance_number: int, alliance_role: str,
+                                  season: int = None) -> int:
         """
         This function returns the alliance selection points for a given team.
 
@@ -52,21 +50,19 @@ class Rankings:
         allianceRole: What role the team is in the alliance.
         Ex: "Captain", "Round1-3", "Backup" or "None"
         """
+        season = season_check(self.season, season)
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/district/allianceSelectionCalculation?tournamentType={tournamentType}&sizeType={str(NumberOfAlliances) + 'Alliance'}&allianceNumber={allianceNumber}&allianceRole={allianceRole}"
+        url_args = f"&tournamentType={tournament_type}&sizeType={str(number_of_alliances) + 'Alliance'}&allianceNumber={alliance_number}&allianceRole={alliance_role}"  # noqa: E501
+        url = f"https://frc-api.firstinspires.org/v3.0/{season}/rankings/district/allianceSelectionCalculation?{url_args}"  # noqa: E501
 
-        response = requests.request("GET", url, headers=self.headers, data=self.payload)
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
         return int(response.text)
 
-    def Playoff_Advancement_Points(
-        self,
-        tournamentType: str,
-        quarterFinalWins: int,
-        semiFinalWins: int,
-        finalWins: int,
-        season: int = None,
-    ):
-
+    def playoff_advancement_points(self, tournament_type: str,
+                                   quarter_final_wins: int,
+                                   semi_final_wins: int, final_wins: int,
+                                   season: int = None) -> int:
         """
         might be down test later
         This function returns the playoff advancement points for a given team.
@@ -81,19 +77,16 @@ class Rankings:
         finalWins: The number of finals the team has won.
         """
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/district/playoffAdvancementCalculation?tournamentType={tournamentType}&quarterFinalWins={quarterFinalWins}&semiFinalWins={semiFinalWins}&finalWins={finalWins}"
+        season = season_check(self.season, season)
+        url_args = f"&tournamentType={tournament_type}&quarterFinalWins={quarter_final_wins}&semiFinalWins={semi_final_wins}&finalWins={final_wins}"  # noqa: E501
+        url = f"{BASEURL}{season}/rankings/district/playoffAdvancementCalculation?{url_args}"  # noqa: E501
 
-        response = requests.request("GET", url, headers=self.headers, data=self.payload)
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
         return response.text
 
-    def Event_Rankings(
-        self,
-        event_code: str,
-        team_number: int = None,
-        top: int = None,
-        season: int = None,
-        use_predifend_infomation: bool = False,
-    ):
+    def event_rankings(self, event_code: str, team_number: int = None,
+                       top: int = None, season: int = None) -> dict:
         """
         This function returns the rankings of a event.
 
@@ -103,37 +96,25 @@ class Rankings:
 
         top: The number of teams to return.
         """
+        season = season_check(self.season, season)
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/{event_code}"
-        if use_predifend_infomation:
-            if self.team_number:
-                url += f"?teamNumber={self.team_number}"
-        else:
-            if team_number:
-                url += f"?teamNumber={team_number}"
-            elif top:
-                url += f"?top={top}"
+        if team_number and top:
+            raise ValueError("Can't use team_number and top at the same time.")
+        url_args = f"&teamNumber={team_number}&top={top}"
+        url = f"https://frc-api.firstinspires.org/v3.0/{season}/rankings/{event_code}?{url_args}"  # noqa: E501
 
-        response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        # Event_Rankings.json = response.json()
-        # text = response.text
-        return response.json() 
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
+        return response.json()
 
-    def Distirct_Rankings(
-        self,
-        District: str = None,
-        teamNumber: int = None,
-        page: int = None,
-        top: int = None,
-        season: int = None,
-    ):
-
+    def distirct_rankings(self, district: str = "", team_number: int = None,
+                          page: int = None, top: int = None,
+                          season: int = None) -> dict:
         """
         District: The district you want to get the rankings for.
         Ex: "NE" or "ONT"
 
         teamNumber: The team number of the team.
-        If you have specified a team number when initializing the class and you want to get all teams feed teamNumber "All".
 
         page: The page of the rankings you want to get.
         Can't be used with top.
@@ -142,22 +123,10 @@ class Rankings:
         Can't be used with page.
         """
 
-        url = f"https://frc-api.firstinspires.org/v3.0/{self.season if not season else season}/rankings/district?"
+        season = season_check(self.season, season)
+        url_args = f"&districtCode={district}&teamNumber={team_number}&page={page}&top={top}"  # noqa: E501
+        url = f"{BASEURL}{season}/rankings/district?{url_args}"
 
-        if District or self.District and not self.team_number and not teamNumber:
-            url += f"districtCode={self.District if not District else District}"
-
-        if teamNumber:
-            url += f"&teamNumber={teamNumber}"
-
-        elif page:
-            url += f"&page={page}"
-
-        elif top:
-            url += f"&top={top}"
-
-        elif self.team_number and str(teamNumber).upper() != "ALL":
-            url += f"&teamNumber={self.team_number}"
-
-        response = requests.request("GET", url, headers=self.headers, data=self.payload)
-        return response.text
+        response = requests.request("GET", url, headers=self.headers,
+                                    data=self.payload)
+        return response.json()

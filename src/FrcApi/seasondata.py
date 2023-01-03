@@ -13,12 +13,9 @@ from .fun import season_check
 class SeasonData:
     """place holder."""
 
-    def __init__(self, season: int = 2023, team_number: int = None,
-                 district: str = None):
+    def __init__(self, season: int = 2023):
         """Place holder."""
-        self.team_number = team_number
         self.season = season
-        self.district = district
         self.headers = {'Authorization': f'Basic {Config.api_key}'}
         self.payload = {}
 
