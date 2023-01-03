@@ -34,7 +34,6 @@ jobs:
     - name: Create the env file
       run: |
         echo "Frc-api-key=${{ secrets.FRC_API_KEY }}" > .env
-        cat .env
     - name: Test with pytest
       run: |
         pytest
