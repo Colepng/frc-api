@@ -1,9 +1,4 @@
 import requests
-import sys
-
-sys.path.append(r"C:\Users\gamin\OneDrive\Documents\GitHub\frc-api\src\FrcApi")
-import src.FrcApi as FrcApi
-
 
 class Rankings:
     def __init__(

@@ -1,15 +1,15 @@
 [project]
 name = "FrcApi"
-version = "0.3"
+version = "0.4"
 authors = [
     { name = "Cole Kauder-McMurrich", email = "gamingwithcole7@gmail.com" },
 ]
 description = "A api wrapper for the FRC events api"
 readme = "README.md"
 license = { file="LICENSE" }
-requires-python = ">=3.10.4"
+requires-python = ">=3.11"
 classifiers = [
-    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",

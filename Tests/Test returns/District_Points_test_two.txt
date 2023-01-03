@@ -1,1 +1,0 @@
-{"Rankings":[{"rank":1,"teamNumber":865,"sortOrder1":2.08,"sortOrder2":406.00,"sortOrder3":645.00,"sortOrder4":345.00,"sortOrder5":0.00,"sortOrder6":0.00,"wins":10,"losses":2,"ties":0,"qualAverage":120.83,"dq":0,"matchesPlayed":12}]}
