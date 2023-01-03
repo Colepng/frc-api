@@ -2,9 +2,9 @@
 
 Add the following sections from the api in order of pritority
 
-- [x] Rankings
-- [x] Matches Results
-- [ ] Season Data
+- [ ] Rankings
+- [ ] Matches Results
+- [x] Season Data
 - [ ] Schedule
 - [ ] Alliances Selection
 - [ ] Awards
