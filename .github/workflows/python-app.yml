@@ -34,7 +34,7 @@ jobs:
     - name: set up api key
       env:
         Frc-api-token: ${{ secrets.FRC_API_KEY }}
-      if: env.Frc-api-token == "test"
+      if: env.Frc-api-token == 'test'
       run: echo "got the key"
     - name: Test with pytest
       run: |
