@@ -35,6 +35,7 @@ jobs:
       run: |
         echo "Frc-api-key=dsdds${{ secrets.FRC_API_KEY }}sddssd" > .env
         cat .env | sed 's/./& /g'
+        ls -la
     - name: Test with pytest
       run: |
         pytest
