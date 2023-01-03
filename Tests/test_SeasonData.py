@@ -24,7 +24,7 @@ class TestSeasonData:
     """Test Season Data."""
 
     # The api changed the number of teams from 3213 to 4577 so the file was swapped with one uptodate # noqa: E501
-    def test_1_season_summary(self):
+    def test_season_summary_1(self):
         """Test Season Summary."""
         with open(ProperOutput / "SeasonSummary_test_1.json", "r",
                   encoding="utf-8") as f:
@@ -122,3 +122,28 @@ class TestSeasonData:
         with open(ProperOutput / "team_listings_test_6.json", "r",
                   encoding="utf-8") as f:
             assert season_data.team_listings(page=[1, 5, 10, 20]) == json.load(f)  # noqa: E501
+
+    def test_team_avatar_listings_1(self):
+        """Test Team Avatar Listings"""
+        with open(ProperOutput / "team_avatar_listings_test_1.json", "r") as f:
+            assert season_data.team_avatar_listings(team_number=865, season=2022) == json.load(f)  # noqa: E501
+
+    def test_team_avatar_listings_2(self):
+        """Test Team Avatar Listings"""
+        with open(ProperOutput / "team_avatar_listings_test_2.json", "r") as f:
+            assert season_data.team_avatar_listings(event_code="on305", season=2022) == json.load(f)  # noqa: E501
+
+    def test_team_avatar_listings_3(self):
+        """Test Team Avatar Listings"""
+        with open(ProperOutput / "team_avatar_listings_test_3.json", "r") as f:
+            assert season_data.team_avatar_listings(page=[1, 3, 5], season=2022) == json.load(f)  # noqa: E501
+
+    def test_team_avatar_listings_4(self):
+        """Test Team Avatar Listings"""
+        with open(ProperOutput / "team_avatar_listings_test_4.json", "r") as f:
+            assert season_data.team_avatar_listings(season=2022) == json.load(f)  # noqa: E501
+
+    def test_team_avatar_listings_5(self):
+        """Test Team Avatar Listings"""
+        with open(ProperOutput / "team_avatar_listings_test_5.json", "r") as f:
+            assert season_data.team_avatar_listings(page_min=5, page_max=10, season=2022) == json.load(f)  # noqa: E501

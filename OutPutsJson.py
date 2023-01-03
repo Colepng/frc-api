@@ -17,4 +17,7 @@ def SaveAsJson(data, filename):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-SaveAsJson(season_data.event_listing(week_number="4", exclude_district=True, season=2018), "event_listings_test_5")  # noqa: E501
+SaveAsJson(season_data.team_avatar_listings(page_min=5, page_max=10, season=2022), "team_avatar_listings_test_5")  # noqa: E501
+
+# with open("Tests/ProperOutput/team_avatar_listings_test_2.png", "wb") as f:  # noqa: E501
+#     f.write(season_data.team_avatar_listings(season=2022, event_code="on305"))  # noqa: E501

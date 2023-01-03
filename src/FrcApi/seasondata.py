@@ -63,16 +63,20 @@ class SeasonData:
         return response.json()
 
     def district_listings(self, season: int = None) -> dict:
-        """Place holder."""
+        """
+        Return a dict of all districts.
+
+        season: the season to get the district list for
+        """
         url = f"{BASEURL}{season_check(season, self.season)}/districts"
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
         return response.json()
 
     def team_listings(self, team_number: int = None, event_code: str = None,
-                      district_code: str = "", season: int = None,
-                      state: str = "", page: int | list = "all",
-                      page_min: int = 1, page_max: int = None) -> dict | list:  # noqa: E501
+                      district_code: str = "", state: str = "",
+                      page: int | list = "all", page_min: int = 1,
+                      page_max: int = None, season: int = None) -> dict | list:
         """Place holder."""
         season = season_check(season, self.season)
         url_args = ""
@@ -96,9 +100,10 @@ class SeasonData:
                 url = f"{BASEURL}{season}/teams?{url_args}&page=1"
                 response = requests.request("GET", url, headers=self.headers,
                                             data=self.payload)
-                page_max = response.json()["pageTotal"]
+                response_json = response.json()
+                page_max = response_json["pageTotal"]
                 if page_max == 1:
-                    return response.json()
+                    return response_json
 
             for page in range(page_min, page_max + 1):
                 url = f"{BASEURL}{season}/teams?{url_args}&page={page}"
@@ -123,3 +128,50 @@ class SeasonData:
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
         return response.json()
+
+    def team_avatar_listings(self, team_number: int = None,
+                             event_code: str = None, season: int = None,
+                             page: int | list = "all", page_min: int = 1,
+                             page_max: int = None) -> bytes | dict:
+        """All images are base64 encoded. to use the returned bytes, decode them with base64.b64decode()"""  # noqa: E501
+
+        season = season_check(season, self.season, min_year=2018)
+        url_args = ""
+        url_args += f"&teamNumber={team_number}"
+        if event_code:
+            url_args += f"&eventCode={event_code}"
+
+        if type(page) == int:
+            if page < 1:
+                raise ValueError("page must be greater than 0")
+            url_args += f"&page={page}"
+
+        elif type(page) == str:
+            data = []
+            if page_max is None:
+                url = f"{BASEURL}{season}/avatars?{url_args}&page=1"
+                response = requests.request("GET", url, headers=self.headers,
+                                            data=self.payload)
+                response_json = response.json()
+                page_max = response_json["pageTotal"]
+                if page_max == 1:
+                    return response_json
+
+            for page in range(page_min, page_max + 1):
+                url = f"{BASEURL}{season}/avatars?{url_args}&page={page}"
+                response = requests.request("GET", url, headers=self.headers,
+                                            data=self.payload)
+                data.append(response.json())
+            return data
+
+        elif type(page) == list:
+            data = []
+            for i in page:
+                url = f"{BASEURL}{season}/avatars?{url_args}&page={i}"
+                response = requests.request("GET", url, headers=self.headers,
+                                            data=self.payload)
+                data.append(response.json())
+            return data
+
+        else:
+            raise TypeError("page must be an int, str, or list")
