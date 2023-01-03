@@ -25,7 +25,6 @@ class TestSeasonData:
 
     # The api changed the number of teams from 3213 to 4577 so the file was swapped with one uptodate # noqa: E501
     def test_1_season_summary(self):
-        print(TOKEN)
         """Test Season Summary."""
         with open(ProperOutput / "SeasonSummary_test_1.json", "r",
                   encoding="utf-8") as f:
