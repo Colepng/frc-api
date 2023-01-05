@@ -18,9 +18,11 @@ from pathlib import Path
 
 load_dotenv()
 
+# Load environment variables
 TOKEN = os.getenv("Frc-api-token")
 PROPEROUTPUT = Path("Tests/ProperOutput")
 
+# Set up the api
 FrcApi.Config.encode_key(FrcApi.Config, TOKEN, "colepng")
 rankings = FrcApi.Rankings()
 
