@@ -18,4 +18,4 @@ def save_as_json(data, filename):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
-save_as_json(match_results.event_match_results(event_code="on305", team_number=865, season=2022), filename="event_match_results_test_3")  # noqa: E501
+save_as_json(match_results.score_details(event_code="on305", match_level="playoff", start=5, end=10, season=2022), filename="score_details_test_4")  # noqa: E501

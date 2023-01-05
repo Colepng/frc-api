@@ -40,6 +40,12 @@ class MatchResults:
         response = requests.request(
             "GET", url, headers=self.headers, data=self.payload)
         print(url)
+
+        if match_number:
+            response_json = response.json()
+            data = response_json["MatchScores"][match_number - 1]
+            return data
+
         return response.json()
 
     def event_match_results(self, event_code: str, match_level: str = None,
