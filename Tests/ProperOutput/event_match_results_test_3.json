@@ -1,0 +1,543 @@
+{
+    "Matches": [
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 1",
+            "level": "Qualification",
+            "matchNumber": 1,
+            "scoreRedFinal": 27,
+            "scoreRedFoul": 4,
+            "scoreRedAuto": 6,
+            "scoreBlueFinal": 2,
+            "scoreBlueFoul": 0,
+            "scoreBlueAuto": 2,
+            "autoStartTime": "2022-03-05T10:20:37.093",
+            "actualStartTime": "2022-03-05T10:20:37.093",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T10:23:30.337",
+            "teams": [
+                {
+                    "teamNumber": 865,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 3161,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 4015,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 7520,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 914,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 8764,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Semifinal 2",
+            "level": "Playoff",
+            "matchNumber": 2,
+            "scoreRedFinal": 34,
+            "scoreRedFoul": 0,
+            "scoreRedAuto": 14,
+            "scoreBlueFinal": 22,
+            "scoreBlueFoul": 0,
+            "scoreBlueAuto": 8,
+            "autoStartTime": "2022-03-05T17:50:11.45",
+            "actualStartTime": "2022-03-05T17:50:11.45",
+            "tournamentLevel": "Playoff",
+            "postResultTime": "2022-03-05T18:04:49.72",
+            "teams": [
+                {
+                    "teamNumber": 5032,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2386,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 914,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 3161,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 6397,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Semifinal 4",
+            "level": "Playoff",
+            "matchNumber": 4,
+            "scoreRedFinal": 45,
+            "scoreRedFoul": 0,
+            "scoreRedAuto": 16,
+            "scoreBlueFinal": 38,
+            "scoreBlueFoul": 8,
+            "scoreBlueAuto": 10,
+            "autoStartTime": "2022-03-05T18:23:58.973",
+            "actualStartTime": "2022-03-05T18:23:58.973",
+            "tournamentLevel": "Playoff",
+            "postResultTime": "2022-03-05T18:30:55.563",
+            "teams": [
+                {
+                    "teamNumber": 5032,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2386,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 914,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 3161,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 6397,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 4",
+            "level": "Qualification",
+            "matchNumber": 4,
+            "scoreRedFinal": 34,
+            "scoreRedFoul": 8,
+            "scoreRedAuto": 8,
+            "scoreBlueFinal": 52,
+            "scoreBlueFoul": 0,
+            "scoreBlueAuto": 16,
+            "autoStartTime": "2022-03-05T11:03:35.85",
+            "actualStartTime": "2022-03-05T11:03:35.85",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T11:06:42.103",
+            "teams": [
+                {
+                    "teamNumber": 5032,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 4015,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 771,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2200,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 610,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 7",
+            "level": "Qualification",
+            "matchNumber": 7,
+            "scoreRedFinal": 8,
+            "scoreRedFoul": 4,
+            "scoreRedAuto": 0,
+            "scoreBlueFinal": 60,
+            "scoreBlueFoul": 12,
+            "scoreBlueAuto": 18,
+            "autoStartTime": "2022-03-05T11:40:45.237",
+            "actualStartTime": "2022-03-05T11:40:45.237",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T11:47:12.443",
+            "teams": [
+                {
+                    "teamNumber": 914,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 1360,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 3161,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2200,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2386,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 10",
+            "level": "Qualification",
+            "matchNumber": 10,
+            "scoreRedFinal": 18,
+            "scoreRedFoul": 0,
+            "scoreRedAuto": 4,
+            "scoreBlueFinal": 25,
+            "scoreBlueFoul": 4,
+            "scoreBlueAuto": 6,
+            "autoStartTime": "2022-03-05T12:20:05.807",
+            "actualStartTime": "2022-03-05T12:20:05.807",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T12:25:03.347",
+            "teams": [
+                {
+                    "teamNumber": 1360,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 6397,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 5032,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 1334,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 914,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 12",
+            "level": "Qualification",
+            "matchNumber": 12,
+            "scoreRedFinal": 34,
+            "scoreRedFoul": 12,
+            "scoreRedAuto": 10,
+            "scoreBlueFinal": 13,
+            "scoreBlueFoul": 0,
+            "scoreBlueAuto": 4,
+            "autoStartTime": "2022-03-05T12:45:04.25",
+            "actualStartTime": "2022-03-05T12:45:04.25",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T12:48:52.537",
+            "teams": [
+                {
+                    "teamNumber": 610,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2386,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 1334,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 771,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 8764,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 13",
+            "level": "Qualification",
+            "matchNumber": 13,
+            "scoreRedFinal": 24,
+            "scoreRedFoul": 12,
+            "scoreRedAuto": 4,
+            "scoreBlueFinal": 17,
+            "scoreBlueFoul": 4,
+            "scoreBlueAuto": 8,
+            "autoStartTime": "2022-03-05T13:41:01.787",
+            "actualStartTime": "2022-03-05T13:41:01.787",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T13:44:44.807",
+            "teams": [
+                {
+                    "teamNumber": 2198,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 1360,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 4015,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 3161,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 6397,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 16",
+            "level": "Qualification",
+            "matchNumber": 16,
+            "scoreRedFinal": 8,
+            "scoreRedFoul": 4,
+            "scoreRedAuto": 0,
+            "scoreBlueFinal": 46,
+            "scoreBlueFoul": 0,
+            "scoreBlueAuto": 14,
+            "autoStartTime": "2022-03-05T14:27:11.76",
+            "actualStartTime": "2022-03-05T14:27:11.76",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T14:30:28.537",
+            "teams": [
+                {
+                    "teamNumber": 1334,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 7520,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 1360,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 8764,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2200,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 18",
+            "level": "Qualification",
+            "matchNumber": 18,
+            "scoreRedFinal": 41,
+            "scoreRedFoul": 12,
+            "scoreRedAuto": 16,
+            "scoreBlueFinal": 29,
+            "scoreBlueFoul": 16,
+            "scoreBlueAuto": 10,
+            "autoStartTime": "2022-03-05T09:47:25.987",
+            "actualStartTime": "2022-03-05T09:47:25.987",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T09:50:58.593",
+            "teams": [
+                {
+                    "teamNumber": 610,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 5032,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2198,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 6397,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 8764,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        },
+        {
+            "isReplay": false,
+            "matchVideoLink": null,
+            "description": "Qualification 22",
+            "level": "Qualification",
+            "matchNumber": 22,
+            "scoreRedFinal": 42,
+            "scoreRedFoul": 12,
+            "scoreRedAuto": 12,
+            "scoreBlueFinal": 24,
+            "scoreBlueFoul": 0,
+            "scoreBlueAuto": 8,
+            "autoStartTime": "2022-03-05T10:53:47.103",
+            "actualStartTime": "2022-03-05T10:53:47.103",
+            "tournamentLevel": "Qualification",
+            "postResultTime": "2022-03-05T10:59:45.177",
+            "teams": [
+                {
+                    "teamNumber": 3161,
+                    "station": "Red1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 7520,
+                    "station": "Red2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 2386,
+                    "station": "Red3",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 771,
+                    "station": "Blue1",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 865,
+                    "station": "Blue2",
+                    "dq": false
+                },
+                {
+                    "teamNumber": 6397,
+                    "station": "Blue3",
+                    "dq": false
+                }
+            ]
+        }
+    ]
+}
