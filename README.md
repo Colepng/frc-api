@@ -6,9 +6,7 @@ by providing a basic explanation of how to do it easily.
 
 Look how easy it is to use:
 
-    import frc_api
-    # Get your stuff done
-    frc_api.do_stuff()
+    import FrcApi 
 
 Features
 --------
@@ -21,7 +19,7 @@ Installation
 
 Install  frc-api by running:
 
-    pip install frc_api
+    pip install frc-api
 
 Contribute
 ----------
