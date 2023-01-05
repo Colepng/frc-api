@@ -17,7 +17,7 @@ ProperOutput = Path("Tests/ProperOutput")
 TOKEN = os.getenv("Frc-api-token")
 
 FrcApi.Config.encode_key(FrcApi.Config, api_key=TOKEN, username="colepng")
-season_data = FrcApi.SeasonData(team_number=865, district="ONT")
+season_data = FrcApi.SeasonData()
 
 
 class TestSeasonData:
