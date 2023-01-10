@@ -1,0 +1,24 @@
+{
+    "districtRanks": [
+        {
+            "districtCode": "ONT",
+            "teamNumber": 865,
+            "rank": 24,
+            "totalPoints": 123,
+            "event1Code": "ON305",
+            "event1Points": 33.0,
+            "event2Code": "ON263",
+            "event2Points": 42.0,
+            "districtCmpCode": "ONCMP",
+            "districtCmpPoints": 48.0,
+            "teamAgePoints": 0,
+            "adjustmentPoints": 0,
+            "qualifiedDistrictCmp": true,
+            "qualifiedFirstCmp": false
+        }
+    ],
+    "rankingCountTotal": 1,
+    "rankingCountPage": 1,
+    "pageCurrent": 1,
+    "pageTotal": 1
+}

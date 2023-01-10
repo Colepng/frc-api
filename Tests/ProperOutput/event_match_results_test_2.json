@@ -1,0 +1,49 @@
+{
+    "isReplay": false,
+    "matchVideoLink": null,
+    "description": "Qualification 1",
+    "level": "Qualification",
+    "matchNumber": 1,
+    "scoreRedFinal": 27,
+    "scoreRedFoul": 4,
+    "scoreRedAuto": 6,
+    "scoreBlueFinal": 2,
+    "scoreBlueFoul": 0,
+    "scoreBlueAuto": 2,
+    "autoStartTime": "2022-03-05T10:20:37.093",
+    "actualStartTime": "2022-03-05T10:20:37.093",
+    "tournamentLevel": "Qualification",
+    "postResultTime": "2022-03-05T10:23:30.337",
+    "teams": [
+        {
+            "teamNumber": 865,
+            "station": "Red1",
+            "dq": false
+        },
+        {
+            "teamNumber": 3161,
+            "station": "Red2",
+            "dq": false
+        },
+        {
+            "teamNumber": 4015,
+            "station": "Red3",
+            "dq": false
+        },
+        {
+            "teamNumber": 7520,
+            "station": "Blue1",
+            "dq": false
+        },
+        {
+            "teamNumber": 914,
+            "station": "Blue2",
+            "dq": false
+        },
+        {
+            "teamNumber": 8764,
+            "station": "Blue3",
+            "dq": false
+        }
+    ]
+}
