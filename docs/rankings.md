@@ -1,75 +1,22 @@
 # Rankings
 
-Here is an example of how you would set your default values 
+Here is an example of how you would initalize the ranking class
 
-```python
-ranking = FrcWrapper.Rankings(season=2022, team_number=865, District="ONT")
+```py
+rankings = FrcApi.Rankings()
 ```
-
-Default values are used when in you dont specify a value for a parameter in a function. If you dont specify a value for season the current season is used.
-
-The season parameter is what you want your default season to be.
-
-The team_number parameter is what you want your default team number to be.
-
-The District parameter is what you want your default district to be.
-        
-        TournamentType: The type of tournament the team is in.
-        Ex: "DistrictEvent" or "Championship" check docs for all of the types.
-
-        qualificationRank: The rank of the team in the qual.
-
-        teamsAtEvent: The number of teams at the event.
-
-
-
-## Alliance Selection Points
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Playoff Advancement Points
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Event Rankings
 
+### Usage
 
+This function is used to get the ranking information for a certin event.
+An example use cause would be to get a teams qual average points.
 
+The event code argument is the a short hand for a certin event, you can find out what they are through this api or [the blue allience](https://www.thebluealliance.com/).
 
+### Arguments
 
-
-
-
-
-
-
-
-
-
-
+event_code
 
 ## District Rankings
-
