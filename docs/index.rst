@@ -6,6 +6,11 @@
 Welcome to frc-api's documentation!
 ===================================
 
+Basic info
+----------
+
+Every function will have an argument called season, you only need to pass a value if u don't want to get a value for the current season.
+
 Contents
 --------
 .. toctree::

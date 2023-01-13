@@ -1,75 +1,71 @@
 # Rankings
 
-Here is an example of how you would set your default values 
+Here is an example of how you would initalize the ranking class
 
-```python
-ranking = FrcWrapper.Rankings(season=2022, team_number=865, District="ONT")
+```py
+rankings = FrcApi.Rankings()
 ```
-
-Default values are used when in you dont specify a value for a parameter in a function. If you dont specify a value for season the current season is used.
-
-The season parameter is what you want your default season to be.
-
-The team_number parameter is what you want your default team number to be.
-
-The District parameter is what you want your default district to be.
-        
-        TournamentType: The type of tournament the team is in.
-        Ex: "DistrictEvent" or "Championship" check docs for all of the types.
-
-        qualificationRank: The rank of the team in the qual.
-
-        teamsAtEvent: The number of teams at the event.
-
-
-
-## Alliance Selection Points
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Playoff Advancement Points
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Event Rankings
 
+### Usage
 
+This function is used to get the ranking information for a certin event.
+An example use cause would be to get a teams qual average points.
 
+### Arguments
 
+- The event_code argument is a shorthand for a certain event, you can find out what they are through this API or [the blue allience](https://www.thebluealliance.com/) or [frc events](https://frc-events.firstinspires.org/).
 
+- The optional team_number argument when provided will only return info related to that team
 
+- An optional argument top will return top N teams
 
+- Season an optional argument on every funcation this will ove- The event_code argument is a shorthand for a certain event, you can find out what they are through this API or [the blue allience](https://www.thebluealliance.com/) or [frc events](https://frc-events.firstinspires.org/).
 
+- The optional team_number argument when provided will only return info related to that team
 
-
-
-
-
-
-
+- An optional argument top will return top N teams
 
 ## District Rankings
 
+## Function: district_rankings
+
+### Parameters
+
+- district_code (str): The district you want to get the rankings for. Ex: "NE" or "ONT". Optional.
+
+- team_number (int): The team number of the team. Optional.
+
+- top (int): The number of teams to return. Optional.
+
+- page (int | list | str): The page of the rankings you want to get. 
+Can't be used with top. Optional.
+
+- page_min (int): The minimum page number. Default is 1.
+
+- page_max (int): The maximum page number. Default is None.
+
+- season (int): The season for which you want to get the rankings. Default is None.
+
+### Returns
+
+- (dict | list) : Rankings as a dictionary or a list of dictionaries, depending on the input provided.
+
+### Description
+
+This function is used to retrieve rankings for a specific district and/or team from a data source.
+
+### Note
+
+- If a team_number is provided, none of the other arguments can be used.
+
+- page parameter can be an integer, string, or list, but it cannot be used with the top parameter.
+
+- If the page parameter is an integer, the function will return the rankings for that specific page.
+
+- If the page parameter is a string, the function will return the rankings for all pages up to the maximum page number.
+
+- If the page parameter is a list, the function will return the rankings for the specific pages in the list.
+
+- Error handling for invalid input is included, such as using the team_number and other arguments at the same time, using the top and page parameters at the same time, and providing a page parameter that is not an integer, string, or list.
