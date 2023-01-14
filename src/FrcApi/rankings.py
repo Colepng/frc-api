@@ -88,13 +88,19 @@ class Rankings:
     def event_rankings(self, event_code: str, team_number: int = None,
                        top: int = None, season: int = None) -> dict:
         """
-        This function returns the rankings of a event.
+        Returns the rankings of a specific event.
 
-        event_code: The event code of the event.
+        Parameters:
+            event_code (str): The event code of the event.
+            team_number (int, optional): The team number of the team.
+            top (int, optional): The number of teams to return.
+            season (int, optional): The season of the event.
 
-        Team_number: The team number of the team.
+        Returns:
+            dict: JSON response of the event rankings.
 
-        top: The number of teams to return.
+        Example:
+            event_rankings("2020miket", team_number=254, season=2020)
         """
         season = season_check(season, self.season)
 
@@ -105,7 +111,6 @@ class Rankings:
 
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
-        print(url)
         return response.json()
 
     def district_rankings(self, district_code: str = "",
@@ -113,20 +118,25 @@ class Rankings:
                           page: int | list = "", page_min: int = 1,
                           page_max: int = None, season: int = None) -> dict | list:  # noqa: E501
         """
-        District: The district you want to get the rankings for.
-        Ex: "NE" or "ONT"
+        Returns the rankings of a specific district.
 
-        teamNumber: The team number of the team.
+        Parameters:
+            district_code (str, optional): The district code of the district.
+            team_number (int, optional): The team number of the team.
+            top (int, optional): The number of teams to return.
+            page (int or list, optional): The page of the rankings you want to get, can be a list.
+            page_min (int, optional): The first page of the rankings you want to get.
+            page_max (int, optional): The last page of the rankings you want to get.
+            season (int, optional): The season of the district.
 
-        page: The page of the rankings you want to get.
-        Can't be used with top.
+        Returns:
+            dict or list: JSON response of the district rankings, or a list of JSON responses if page is a list.
 
-        top: The number of teams to return.
-        Can't be used with page.
-        """
+        Example:
+            district_rankings("NE", top=10, season=2020)
+        """  # noqa: E501
 
         if team_number and any([top, page, district_code]):
-            print(team_number, top, page, district_code)
             raise ValueError("Can't use team_number and any other arguments at the same time.")  # noqa: E501
 
         elif top and page != "":
@@ -144,7 +154,6 @@ class Rankings:
                 url = f"{BASEURL}{season}/rankings/district?{url_args}&page=1"
                 response = requests.request("GET", url, headers=self.headers,
                                             data=self.payload)
-                print(url)
                 response_json = response.json()
                 page_max = response_json["pageTotal"]
                 on_page = response_json["rankingCountPage"]
@@ -173,5 +182,4 @@ class Rankings:
         url = f"{BASEURL}{season}/rankings/district?{url_args}"
         response = requests.request("GET", url, headers=self.headers,
                                     data=self.payload)
-        print(url)
         return response.json()

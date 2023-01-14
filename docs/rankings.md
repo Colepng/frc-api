@@ -21,15 +21,27 @@ An example use cause would be to get a teams qual average points.
 
 - An optional argument top will return top N teams
 
-- Season an optional argument on every funcation this will ove- The event_code argument is a shorthand for a certain event, you can find out what they are through this API or [the blue allience](https://www.thebluealliance.com/) or [frc events](https://frc-events.firstinspires.org/).
+- Season an optional argument on every funcation this will over The event_code argument is a shorthand for a certain event, you can find out what they are through this API or [the blue allience](https://www.thebluealliance.com/) or [frc events](https://frc-events.firstinspires.org/).
 
 - The optional team_number argument when provided will only return info related to that team
 
 - An optional argument top will return top N teams
 
-## District Rankings
+### Examples
 
-## Function: district_rankings
+This example will return reankings for Humber College 2022
+
+```py
+rankings.event_rankings(event_code="on305", season=2022)
+```
+
+Here is another example, this will return the top 5 teams at the same event as above.
+
+```py
+rankings.event_rankings(event_code="on305", top=5, season=2022)
+```
+
+## District Rankings
 
 ### Parameters
 
@@ -39,7 +51,7 @@ An example use cause would be to get a teams qual average points.
 
 - top (int): The number of teams to return. Optional.
 
-- page (int | list | str): The page of the rankings you want to get. 
+- page (int | list | str): The page of the rankings you want to get.
 Can't be used with top. Optional.
 
 - page_min (int): The minimum page number. Default is 1.
@@ -69,3 +81,17 @@ This function is used to retrieve rankings for a specific district and/or team f
 - If the page parameter is a list, the function will return the rankings for the specific pages in the list.
 
 - Error handling for invalid input is included, such as using the team_number and other arguments at the same time, using the top and page parameters at the same time, and providing a page parameter that is not an integer, string, or list.
+
+### Example
+
+This example will return the rankings for the Ontario district both pages 1 and 2
+
+```py
+rankings.district_rankings(district_code="ONT", page_min=1, page_max=2, season=2022)
+```
+
+Here is another example, this will return page 2 of the rankings for the Ontario district. The advantage to use a list instead of a int would be to supply a range of different numbers like [1, 5, 3, 9]
+
+```py
+rankings.district_rankings(district_code="ONT", page=[2], season=2022)
+```
